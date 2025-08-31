@@ -27,6 +27,12 @@ export function Header() {
               </Link>
             </li>
             <li>
+              <Link href="#creatives" className="relative text-gray-300 hover:text-indigo-400 transition-colors duration-300 text-sm md:text-base group">
+                Creative Works
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-400 transform scale-x-0 transition-transform duration-300 ease-out origin-left group-hover:scale-x-100"></span>
+              </Link>
+            </li>
+            <li>
               <Link href="#contact" className="relative text-gray-300 hover:text-indigo-400 transition-colors duration-300 text-sm md:text-base group">
                 Contact
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-400 transform scale-x-0 transition-transform duration-300 ease-out origin-left group-hover:scale-x-100"></span>

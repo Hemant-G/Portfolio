@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '../components/Header';
 import { ProjectCard } from '../components/ProjectCard';
+import { CreativesCard } from '../components/CreativesCard';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 // The main page component for the single-page application.
@@ -35,6 +36,22 @@ export default function HomePage() {
         tech: ["Node.js", "Express", "React", "MongoDB"],
         link: "https://markdown-frontend-one.vercel.app"
       },
+    ],
+    creative_works: [
+      {
+        id: 1,
+        title: "Short Film: 'Escapism'",
+        description: "A short film depicting some ways we use to escape from reality.",
+        image: "/ESCAPISM.png",
+        link: "https://youtu.be/ePza2gnHBqU?si=SVZ9G_CqAKc4Ag6j",
+      },
+      {
+        id: 2,
+        title: "Gaming Channel",
+        description: "A YouTube channel where gameplay and edits of various video games.",
+        image: "/ElusionPlays.png",
+        link: "https://youtube.com/@elusionplays?si=yV-vrJ7KGLPkY9L3"
+      },
     ]
   };
 
@@ -46,7 +63,7 @@ export default function HomePage() {
         <section id="about" className="mx-auto w-full text-center">
           <div className="relative bg-gray-950/20 shadow-2xl  animate-fade-in">
             {/* Video Background */}
-            <div className="relative h-180 mb-70">
+            <div className="relative h-200 mb-70">
               <video
                 autoPlay
                 loop
@@ -54,13 +71,13 @@ export default function HomePage() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover z-[-1]"
               >
-                <source src="/video_bg.mp4" type="video/mp4" />
-                              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/95 via-gray-950/60 to-transparent" />
+                <source src="/bg_video.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/95 via-gray-950/40 to-transparent" />
             </div>
 
             {/* Overlay content */}
-            <div className="absolute inset-0 top-70 flex h-150 flex-col md:flex-row items-center justify-center md:justify-between w-3/4 mx-auto text-gray-100 px-6 py-30">
+            <div className="absolute inset-0 top-90 flex h-150 flex-col md:flex-row items-center justify-center md:justify-between w-3/4 mx-auto text-gray-100 px-6 py-30">
               {/* Profile Image */}
               <div className="mb-6 ">
                 <div className="w-90 rounded-xl shadow-xl overflow-hidden bg-gray-800">
@@ -98,10 +115,9 @@ export default function HomePage() {
         </section>
 
 
-        <hr className="w-1/2 border-gray-700 my-6" />
 
         {/* Projects Section */}
-        <section id="projects" className="p-8 w-3/4 mx-auto">
+        <section id="projects" className="p-8 w-3/4 mx-auto mb-16">
           <h2 className="text-4xl md:text-6xl font-extrabold text-indigo-300 leading-tight mb-8 text-center animate-fade-in-down">
             Projects
           </h2>
@@ -112,10 +128,22 @@ export default function HomePage() {
           </div>
         </section>
 
-        <hr className="w-1/2 border-gray-700 my-16" />
+
+        {/* Hobbies and Creative Works Section */}
+        <section id="creatives" className="p-8 w-3/4 mx-auto mb-16">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-indigo-300 leading-tight mb-8 text-center animate-fade-in-down">
+            Hobbies & Creative Works
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {portfolioData.creative_works.map(project => (
+              <CreativesCard key={project.id} project={project} />
+            ))}
+          </div>
+        </section>
+
 
         {/* Contact Section */}
-        <section id="contact" className="p-8 w-3/4 mx-auto text-center">
+        <section id="contact" className="p-8 w-3/4 mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-6xl  font-bold mb-6 text-indigo-300">
             Contact Me
           </h2>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export function ProjectCard({ project }) {
   return (
-    <div className="group relative rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl">
+    <div className="group relative rounded-3xl border border-gray-700 overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl">
       <div className="relative w-full h-64 overflow-hidden">
         <Image
           src={project.image}
@@ -23,8 +23,8 @@ export function ProjectCard({ project }) {
             {project.description}
           </p>
           <div className="flex flex-wrap gap-2 mb-4 transform transition-all duration-300 translate-y-full delay-200 group-hover:translate-y-0 opacity-0 group-hover:opacity-100">
-            {project.tech.map(tech => (
-              <span key={tech} className="bg-indigo-800 text-gray-50 text-sm font-medium px-2 py-1 rounded-full font-ibm-plex-sans">
+            {project.tech?.map(tech => (
+              <span key={tech} className="bg-gray-800 text-gray-50 text-sm font-medium px-2 py-1 rounded-full font-ibm-plex-sans">
                 {tech}
               </span>
             ))}
