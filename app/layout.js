@@ -1,29 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans } from 'next/font/google';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const ibmPlexSans = IBM_Plex_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-ibm-plex-sans', // Define as a CSS variable
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata = {
-  title: 'John Doe - Portfolio',
-  description: 'A portfolio showcasing the work and skills of John Doe.',
-};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={ibmPlexSans.variable}>
+
+      <body>
         {children}
       </body>
+
     </html>
   );
 }

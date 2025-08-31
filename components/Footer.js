@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
   const contact = {
-    email: "john.doe@example.com",
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
+    email: "hs2hemantsingh@gmail.com",
+    github: "https://github.com/Hemant-G/Markdown",
+    linkedin: "www.linkedin.com/in/hemant-s01",
   };
 
   return (
