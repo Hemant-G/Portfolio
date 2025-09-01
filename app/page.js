@@ -15,8 +15,8 @@ export default function HomePage() {
     },
     contact: {
       email: "hs2hemantsingh@gmail.com",
-      github: "https://github.com/Hemant-G/Markdown",
-      linkedin: "www.linkedin.com/in/hemant-s01",
+      github: "https://github.com/Hemant-G",
+      linkedin: "https://www.linkedin.com/in/hemant-s01/",
     },
     projects: [
       {
@@ -60,44 +60,29 @@ export default function HomePage() {
       <Header />
       <main className="flex-grow flex flex-col items-center justify-center bg-gray-950/30">
         {/* About Section */}
-        <section id="about" className="mx-auto w-full text-center">
-          <div className="relative bg-gray-950/20 shadow-2xl  animate-fade-in">
-            {/* Video Background */}
-            <div className="relative h-200 mb-70">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover z-[-1]"
-              >
-                <source src="/bg_video.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/95 via-gray-950/40 to-transparent" />
-            </div>
+        <section id="about" className="relative mx-auto w-full text-center py-20 md:py-32 md:mb-80">
+          <div className="absolute md:h-200 inset-0 z-[-1]">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover block"
+            >
+              <source src="/bg_video.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent" />
+          </div>
 
-            {/* Overlay content */}
-            <div className="absolute inset-0 top-90 flex h-150 flex-col md:flex-row items-center justify-center md:justify-between w-3/4 mx-auto text-gray-100 px-6 py-30">
-              {/* Profile Image */}
-              <div className="mb-6 ">
-                <div className="w-90 rounded-xl shadow-xl overflow-hidden bg-gray-800">
-                  <Image
-                    src="/profile.jpg"
-                    alt="Profile"
-                    width={160}
-                    height={160}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-              </div>
-
-              {/* About text */}
-              <div className="ml-6 md:ml-12 max-w-4xl text-left">
-                <h2 className="text-4xl md:text-7xl font-bold leading-tight mb-4 drop-shadow-lg">
+          {/* Overlay content */}
+          <div className="relative md:top-50 z-10 w-full max-w-7xl mx-auto text-gray-100 px-6 sm:px-8 md:px-12">
+            <div className="flex flex-col md:flex-row items-center md:items-start text-left">
+              <div className="w-full">
+                <h2 className="text-5xl md:text-7xl lg:text-8xl mx-auto font-bold leading-tight mb-4 drop-shadow-lg">
                   Hello, I'm <span className="text-indigo-400">{portfolioData.name}</span>
                 </h2>
                 <p className="text-xl md:text-2xl leading-relaxed font-ibm-plex-sans max-w-3xl mb-8 text-slate-300">
-                  I am a 3rd-year <span className="font-bold text-indigo-300">Computer Science & Engineering</span> student with a focus on <span className="font-bold text-indigo-300">Web Development</span> and <span className="font-bold text-indigo-300">Cybersecurity</span>. My interests also include <span className="font-bold text-indigo-300">Art</span> and <span className="font-bold text-indigo-300">Video Games</span>.
+                  I am a 3rd-year undergrad student who's passionate about <span className="font-bold text-indigo-300">Software Engineering</span> and <span className="font-bold text-indigo-300">Cybersecurity</span>. My interests also include <span className="font-bold text-indigo-300">Art</span> and <span className="font-bold text-indigo-300">Video Games</span>.
                 </p>
 
                 {/* Resume Button */}
@@ -114,10 +99,8 @@ export default function HomePage() {
           </div>
         </section>
 
-
-
         {/* Projects Section */}
-        <section id="projects" className="p-8 w-3/4 mx-auto mb-16">
+        <section id="projects" className="p-8 w-full max-w-6xl mx-auto mb-16">
           <h2 className="text-4xl md:text-6xl font-extrabold text-indigo-300 leading-tight mb-8 text-center animate-fade-in-down">
             Projects
           </h2>
@@ -128,9 +111,8 @@ export default function HomePage() {
           </div>
         </section>
 
-
         {/* Hobbies and Creative Works Section */}
-        <section id="creatives" className="p-8 w-3/4 mx-auto mb-16">
+        <section id="creatives" className="p-8 w-full max-w-6xl mx-auto mb-16">
           <h2 className="text-4xl md:text-6xl font-extrabold text-indigo-300 leading-tight mb-8 text-center animate-fade-in-down">
             Hobbies & Creative Works
           </h2>
@@ -141,13 +123,12 @@ export default function HomePage() {
           </div>
         </section>
 
-
         {/* Contact Section */}
-        <section id="contact" className="p-8 w-3/4 mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-6xl  font-bold mb-6 text-indigo-300">
+        <section id="contact" className="p-8 w-full max-w-6xl mx-auto text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-indigo-300">
             Contact Me
           </h2>
-          <p className="text-lg md:text-xl font-ibm-plex-sans  text-slate-300 mb-8">
+          <p className="text-lg md:text-xl font-ibm-plex-sans text-slate-300 mb-8">
             Feel free to reach out to me via email or connect with me on social media.
           </p>
           <div className="flex justify-center space-x-6">

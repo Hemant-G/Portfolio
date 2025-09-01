@@ -5,7 +5,7 @@ const ibmPlexSans = IBM_Plex_Sans({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-ibm-plex-sans', // Define as a CSS variable
+  variable: '--font-ibm-plex-sans', 
 });
 
 export default function RootLayout({ children }) {
