@@ -8,11 +8,12 @@ import { Footer } from '../../../components/Footer';
 const LanstreamPage = () => {
   return (
     <>
-    {/* Back Button */}
-          <Link href="/" className="sticky top-10 left-8 z-50 duration-300">
+    {/* Back Button - Adjusted top and left for smaller screens */}
+          <Link href="/" className="sticky top-4 sm:top-10 left-4 sm:left-8 z-50 duration-300">
             <Undo2 size={40} className="text-gray-400 hover:text-cyan-400 transition-colors duration-300" />
           </Link>
-      <div className="bg-slate-950 text-gray-300 text-lg px-40 flex flex-col items-center  ">
+      {/* Main Container - Responsive padding: px-4 on mobile, px-10 on sm, px-40 on lg */}
+      <div className="bg-slate-950 text-gray-300 text-lg px-4 sm:px-10 lg:px-40 flex flex-col items-center">
         {/* Header Section */}
         <header className="text-center mb-6 w-full">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-100 mb-4 tracking-tight">
@@ -30,18 +31,18 @@ const LanstreamPage = () => {
           </h2>
           <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
             {/* Desktop Screen Image */}
-            <div className="absolute flex items-center justify-center z-10 rounded-4xl border-4 border-gray-600 ">
+            <div className="absolute flex items-center justify-center z-10 rounded-xl border-4 md:rounded-4xl border-gray-600 ">
               <Image
                 src="/lanstream_thumbnail.png"
                 alt="LANStream on desktop"
                 width={1000}
                 height={600}
-                className="w-full h-auto object-contain animate-fade-in rounded-4xl"
+                className="w-full h-auto object-contain animate-fade-in rounded-xl md:rounded-4xl"
               />
             </div>
 
-            {/* Mobile Screen Image - Overlaps desktop */}
-            <div className="absolute inset-0 flex items-center justify-center z-20  ">
+            {/* Mobile Screen Image */}
+            <div className="absolute -left-80 inset-0 md:-left-60 flex items-center justify-center z-20 lg:flex">
               <Image
                 src="/lanstream_mobile.png"
                 alt="LANStream on mobile"
@@ -77,7 +78,8 @@ const LanstreamPage = () => {
               This video demonstrates how to run the backend and frontend on the local machine. It also shows the initial warnings related to self-signed certificates that a user must accept for first-time access in a LAN environment.
             </p>
             <div className="flex justify-center">
-              <div className="relative w-3xl rounded-3xl overflow-hidden cursor-pointer group">
+              {/* Responsive width: full width max-w-3xl on mobile, constrained on desktop */}
+              <div className="relative w-full max-w-3xl rounded-3xl overflow-hidden cursor-pointer group">
                 <a href="https://www.youtube.com/watch?v=k2tijbZ_J64" target="_blank" rel="noopener noreferrer">
                   <img
                     src="/lanstream_thumbnail.png"
@@ -85,7 +87,7 @@ const LanstreamPage = () => {
                     className="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
                   />
                   {/* Overlay for hover effect */}
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-black bg-opacity-50 md:opacity-0 flex items-center justify-center opacity-50 group-hover:opacity-70 transition-opacity duration-300">
                     <img src="/yt_logo_fullcolor_white_digital.png" alt="Youtube Logo" />
                   </div>
                 </a>
@@ -102,7 +104,8 @@ const LanstreamPage = () => {
               A walkthrough of the player's functionality on a desktop computer. This showcases the custom controls, responsive layout, and the adaptive streaming in action within the high-speed local network.
             </p>
             <div className="flex justify-center">
-              <div className="relative w-3xl rounded-3xl overflow-hidden cursor-pointer group">
+              {/* Responsive width: full width max-w-3xl on mobile, constrained on desktop */}
+              <div className="relative w-full max-w-3xl rounded-3xl overflow-hidden cursor-pointer group">
                 <a href="https://www.youtube.com/watch?v=BTK19KNDHQI" target="_blank" rel="noopener noreferrer">
                   <img
                     src="/lanstream_thumbnail.png"
@@ -110,7 +113,7 @@ const LanstreamPage = () => {
                     className="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
                   />
                   {/* Overlay for hover effect */}
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex md:opacity-0 items-center justify-center opacity-50 group-hover:opacity-70 transition-opacity duration-300">
                     <img src="/yt_logo_fullcolor_white_digital.png" alt="Youtube Logo" />
                   </div>
                 </a>
@@ -127,7 +130,8 @@ const LanstreamPage = () => {
               This video demonstrates the project on a mobile device within the same LAN. It highlights the responsive design and the seamless transition to fullscreen landscape mode, which is crucial for a mobile viewing experience.
             </p>
             <div className="flex justify-center">
-              <div className="relative w-1/6 rounded-3xl overflow-hidden cursor-pointer group">
+              {/* Responsive width: full width max-w-sm on mobile, w-1/6 only on large screens */}
+              <div className="relative w-full max-w-sm lg:w-1/6 rounded-3xl overflow-hidden cursor-pointer group">
                 <a href="https://www.youtube.com/shorts/9eEaTk2OQ0U" target="_blank" rel="noopener noreferrer">
                   <img
                     src="/lanstream_mobile.png"
@@ -135,7 +139,7 @@ const LanstreamPage = () => {
                     className="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105"
                   />
                   {/* Overlay for hover effect */}
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-50 md:opacity-0 group-hover:opacity-70 transition-opacity duration-300">
                     <img src="/yt_logo_fullcolor_white_digital.png" alt="Youtube Logo" />
                   </div>
                 </a>
@@ -146,12 +150,13 @@ const LanstreamPage = () => {
 
         
 
-        {/* Streaming Architecture */}
-        <section className="mb-12 px-40 ">
+        {/* Streaming Architecture - Responsive padding: px-4 on mobile, px-10 on sm, px-40 on lg */}
+        <section className="mb-12 px-4 sm:px-10 lg:px-40 ">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-100 mb-6 border-b border-gray-700 pb-2">
             Streaming Architecture: How it all Works
           </h2>
-          <article className="prose prose-invert max-w-none text-gray-300">
+          {/* Added text-base sm:text-lg for font size and break-words for line wrapping */}
+          <article className="prose prose-invert max-w-none text-gray-300 text-base sm:text-lg break-words">
             <p>The system's core is the DASH (Dynamic Adaptive Streaming over HTTP) protocol. The backend doesn't stream a single video file; instead, it provides a Manifest (<code className="text-indigo-400">.mpd</code> file) and multiple fragmented video files (<code className="text-indigo-400">.m4s</code> files).</p>
 
             <h3 className="text-3xl font-semibold text-gray-100 mb-2 mt-8">Adaptive Bitrate Algorithms</h3>
@@ -181,13 +186,14 @@ const LanstreamPage = () => {
           </article>
         </section>
 
-        {/* Getting Started Guide */}
-        <section className="mb-12 px-40">
+        {/* Getting Started Guide - Responsive padding: px-4 on mobile, px-10 on sm, px-40 on lg */}
+        <section className="mb-12 px-4 sm:px-10 lg:px-40">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-100 mb-6 border-b border-gray-700 pb-2">
             Getting Started
           </h2>
 
-          <article className="prose prose-invert max-w-none text-gray-300">
+          {/* Added text-base sm:text-lg for font size and break-words for line wrapping */}
+          <article className="prose prose-invert max-w-none text-gray-300 text-base sm:text-lg break-words">
             <p>Running the Flask server with <code className="text-indigo-400">python run.py</code> instead of <code className="text-indigo-400">flask run</code> is a common practice when a project requires custom setup logic. Here's an updated guide that uses this command and includes the custom CLI commands you've created.</p>
 
             <h3 className="text-3xl font-semibold text-gray-100 mb-2">1. Backend Setup and Execution (Flask)</h3>
@@ -195,12 +201,13 @@ const LanstreamPage = () => {
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Setup</h4>
             <p>Navigate to the backend directory and create a virtual environment to manage dependencies:</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">python -m venv venv</code></pre>
+            {/* Added overflow-x-auto to allow horizontal scrolling for long commands */}
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">python -m venv venv</code></pre>
             <p>Activate the virtual environment:</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400"><span className='text-gray-100'>On macOS/Linux:</span> source venv/bin/activate</code></pre>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400"><span className='text-gray-100'>On Windows:</span> .&#92;venv&#92;Scripts&#92;activate</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400"><span className='text-gray-100'>On macOS/Linux:</span> source venv/bin/activate</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400"><span className='text-gray-100'>On Windows:</span> .&#92;venv&#92;Scripts&#92;activate</code></pre>
             <p>Install dependencies using the <code>requirements.txt</code> file:</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">pip install -r requirements.txt</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">pip install -r requirements.txt</code></pre>
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Enabling HTTPS</h4>
             <p>The backend is configured to use HTTPS to secure communication between the server and clients on the local network. This is handled by the 'run.py' script, which launches the Flask development server with SSL/TLS certificates. The initial connection will use a self-signed certificate, which may cause a security warning in your browser. You can safely proceed past this warning to access the application. The 'ssl_context=('cert.pem', 'key.pem')' parameter in the 'run.py' script is what instructs Flask to use the specific certificate files you generated. </p>
@@ -216,14 +223,15 @@ const LanstreamPage = () => {
 
             <h5 className="text-xl font-medium text-gray-100 mb-1 mt-4">Step 3: Run the OpenSSL Command</h5>
             <p>Execute the following command to generate the private key ('key.pem') and the self-signed certificate ('cert.pem').</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">openssl req -x509 -newkey rsa:4096 -nodes -keyout key.pem -out cert.pem -days 365</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">openssl req -x509 -newkey rsa:4096 -nodes -keyout key.pem -out cert.pem -days 365</code></pre>
 
             <h5 className="text-xl font-medium text-gray-100 mb-1 mt-4">Step 4: Fill in the Certificate Information</h5>
             <p>You will be prompted to enter some information. When you get to the "Common Name (e.g., server FQDN or YOUR name)" field, you should enter your **computer's local IP address** (e.g., '192.168.1.10') or 'localhost'. This is crucial for the browser to recognize the certificate for your specific server. Once completed, the 'key.pem' and 'cert.pem' files will be created in the 'backend' directory.</p>
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Environment File</h4>
+            {/* Added text-sm to shrink font slightly on mobile and overflow-x-auto */}
             <p>Create a file named <code className="text-indigo-400">.env</code> in the backend directory with the following variables:</p>
-            <pre className="bg-slate-800 p-3 rounded-lg text-gray-300"><code>FLASK_ENV=development <br />
+            <pre className="bg-slate-800 p-3 rounded-lg text-gray-300 text-sm overflow-x-auto"><code>FLASK_ENV=development <br />
               SECRET_KEY=supersecretkeyforexample_DO_NOT_USE_IN_PRODUCTION_12345<br />
               DATABASE_URL=postgresql://username:password@localhost:5432/dbname<br />
               BACKEND_URL=https://192.168.18.6:5000/api<br />
@@ -241,18 +249,18 @@ const LanstreamPage = () => {
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Execution</h4>
             <p>Run the Flask server. It will serve the media files and API endpoints, accessible to other devices on the same LAN.</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">python run.py</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">python run.py</code></pre>
 
             <h3 className="text-3xl font-semibold text-gray-100 mb-2 mt-8">2. Database Management</h3>
             <p>Your project uses Flask-Migrate to handle database schema changes. Here's how to use the crucial commands:</p>
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Database Migration:</h4>
             <p>The <code className="text-indigo-400">db migrate</code> command automatically generates a migration script based on changes you've made to your database models. It's a key part of managing your PostgreSQL database schema.</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">flask db migrate</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">flask db migrate</code></pre>
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Database Upgrade:</h4>
             <p>The <code className="text-indigo-400">db upgrade</code> command applies the pending migration scripts to your database, updating the schema to the latest version. This is the command you run to apply new changes.</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">flask db upgrade</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">flask db upgrade</code></pre>
             <p>These commands are executed on the server machine to manage the database and are separate from running the server itself.</p>
 
             <h3 className="text-3xl font-semibold text-gray-100 mb-2 mt-8">3. Media Management CLI Tools</h3>
@@ -260,15 +268,16 @@ const LanstreamPage = () => {
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Scan Media:</h4>
             <p>This command scans your designated media directory, adds new files to the database, and removes any files that have been deleted from the disk. This keeps your database in sync with your physical media library.</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">flask scan-media</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">flask scan-media</code></pre>
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">List Media:</h4>
             <p>This command displays a list of all media files currently stored in your database, along with their IDs, titles, and file paths. It's a useful utility for verifying which files are available in your application.</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">flask list-media</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">flask list-media</code></pre>
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Package DASH:</h4>
             <p>This custom command automates the entire DASH packaging process. You can use it to convert specific video files by their IDs or to process all video files in the database using the <code className="text-indigo-400">--all</code> flag.</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">
+            {/* Added text-sm to shrink font slightly on mobile and overflow-x-auto */}
+            <pre className="bg-slate-800 p-3 rounded-lg text-sm overflow-x-auto"><code className="language-bash text-indigo-400">
               flask package-dash [media_id(s)] <br />
               flask package-dash --all
             </code></pre>
@@ -279,23 +288,23 @@ const LanstreamPage = () => {
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Setup</h4>
             <p>Navigate to the frontend directory and install the Node.js dependencies:</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">npm install</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">npm install</code></pre>
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Execution</h4>
             <p>Run the Vite development server. This server will host the React app.</p>
-            <pre className="bg-slate-800 p-3 rounded-lg"><code className="language-bash text-indigo-400">npm run dev</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg overflow-x-auto"><code className="language-bash text-indigo-400">npm run dev</code></pre>
 
             <h4 className="text-2xl font-medium text-gray-100 mb-1 mt-4">Environment File</h4>
             <p>Create a file named <code className="text-indigo-400">.env</code> in the frontend directory with the following variable:</p>
-            <pre className="bg-slate-800 p-3 rounded-lg text-gray-300"><code>VITE_BACKEND_BASE_URL=https://192.168.18.6:5000</code></pre>
+            <pre className="bg-slate-800 p-3 rounded-lg text-gray-300 overflow-x-auto"><code>VITE_BACKEND_BASE_URL=https://192.168.18.6:5000</code></pre>
             <p>This URL must match the IP address of your backend server on the local network.</p>
           </article>
         </section>
 
         <div className="w-full space-y-12">
 
-          {/* Technical Stack */}
-        <section className="mt-12 px-40 text-center">
+          {/* Technical Stack - Responsive padding: px-4 on mobile, px-10 on sm, px-40 on lg */}
+        <section className="mt-12 px-4 sm:px-10 lg:px-40 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-100 mb-6 border-b border-gray-700 pb-2">
             Tech Stack
           </h2>
