@@ -17,7 +17,7 @@ const LanstreamPage = () => {
         {/* Header Section */}
         <header className="text-center mb-6 w-full">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-gray-100 mb-4 tracking-tight">
-            LANstream
+            LANStream
           </h1>
           <p className="text-xl sm:text-2xl font-medium text-gray-300">
             A full-stack video streaming solution designed for seamless, high-quality media playback within a local area network (LAN).
@@ -62,7 +62,7 @@ const LanstreamPage = () => {
             Project Overview
           </h2>
           <p className="text-lg sm:text-xl mb-4 leading-relaxed">
-            LANstream is a self-contained media streaming application. The player uses <span className="font-bold text-indigo-400">DASH (Dynamic Adaptive Streaming over HTTP)</span> to deliver video content from a local server to any device on the same network. This approach ensures low latency and high-speed playback without relying on external internet connections or cloud services.
+            LANStream is a self-contained media streaming application. The player uses <span className="font-bold text-indigo-400">DASH (Dynamic Adaptive Streaming over HTTP)</span> to deliver video content from a local server to any device on the same network. This approach ensures low latency and high-speed playback without relying on external internet connections or cloud services.
           </p>
           <p className="text-lg sm:text-xl leading-relaxed">
             Key features include: <span className="font-bold">adaptive bitrate streaming</span>, <span className="font-bold">responsive UI</span>, <span className="font-bold">user progress tracking</span>, and <span className="font-bold">robust playback controls</span>, all optimized for a local network environment.

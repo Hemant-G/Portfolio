@@ -25,8 +25,8 @@ export default function HomePage() {
         description: "A fast, local network streaming server and application for sharing media across devices in a Local Area Network.",
         image: "/lanstream_thumbnail.png",
         tech: ["Python", "Flask", "React", "DASH"],
-        link: "/projects/lanstream",
-        slug: "lanstream"
+        link: "/projects/LANStream",
+        slug: "LANStream"
       },
       {
         id: 2,
